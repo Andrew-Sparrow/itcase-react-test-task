@@ -6,7 +6,7 @@ import './app.scss';
 import Main from '../main/Main.jsx'
 import { AppRoute } from '../../const'
 import NotFound from '../not-found/NotFound'
-import ProductCard from '../product-card/ProductCard'
+import ProductCard from '../product-card/ProductCard';
 
 
 export default function App() {
@@ -17,7 +17,7 @@ export default function App() {
           <Main className="page page--gray page--index" />
         </Route>
         <Route exact path={AppRoute.PRODUCT}>
-          <ProductCard  />
+          <ProductCard />
         </Route>
         <Route>
           <NotFound />

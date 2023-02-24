@@ -1,20 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
-import './product-card.scss'
 
 function ProductCard(props) {
-  const {
-    id,
-    name,
-    colors
-  } = props;
+  const { id } = useParams();
 
   return (
-    <Link className='product' to={`/product/${ id }`}>
-      <img src={colors[0].images[0]} alt={name} className='product__img' />
-      <h3>{name}</h3>
-    </Link>
+    <div>
+      <h1>{id}</h1>
+    </div>
   );
 }
 

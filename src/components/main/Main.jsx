@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { getProducts, getIsProductsLoaded } from '../../store/products/selectors'
 import LoadingScreen from '../loading-screen/LoadingScreen.jsx'
 import MainEmpty from '../main-empty/MainEmpty';
-import ProductCard from '../product-card/ProductCard';
+import Product from '../product/Product';
 
 
 
@@ -23,7 +23,7 @@ export default function Main() {
       {products.length === 0
         ? <MainEmpty />
         : products.map((product) => {
-          return <ProductCard key={product.id} {...product} />
+          return <Product key={product.id} {...product} />
         })}
     </div>
   )
