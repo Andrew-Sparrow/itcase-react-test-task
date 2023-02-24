@@ -1,4 +1,4 @@
 export const AppRoute = {
   MAIN: '/',
-  PLACE: '/place/:id',
+  PRODUCT: '/product/:id',
 };

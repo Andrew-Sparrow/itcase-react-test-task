@@ -1,26 +1,26 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { Switch, Route, HashRouter as BrowserRouter } from 'react-router-dom'
+import browserHistory from '../../browser-history'
 
+import Main from '../main/Main.jsx'
 import { AppRoute } from '../../const'
-import { getProducts, getIsProductsLoaded } from '../../store/products/selectors'
-import LoadingScreen from '../loading-screen/LoadingScreen.jsx'
+import NotFound from '../not-found/NotFound'
 
 
 export default function App() {
-  const products = useSelector(getProducts);
-  const isProductsLoaded = useSelector(getIsProductsLoaded);
-
-  if (!isProductsLoaded) {
-    return (
-      <LoadingScreen />
-    );
-  }
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>{products}</p>
-      </header>
-    </div>
+    <BrowserRouter history={browserHistory}>
+      <Switch>
+        <Route exact path={AppRoute.MAIN}>
+          <Main className="page page--gray page--index" />
+        </Route>
+        <Route exact path={AppRoute.PRODUCT}>
+          {/* <ProductCard  /> */}
+        </Route>
+        <Route>
+          <NotFound />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   )
 }
