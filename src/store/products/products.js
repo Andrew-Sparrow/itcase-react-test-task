@@ -10,13 +10,12 @@ const initialState = {
 }
 
 
-const places = createReducer(initialState, (builder) => {
+const products = createReducer(initialState, (builder) => {
   builder
     .addCase(loadProducts, (state, action) => {
       state.products = action.payload;
       state.isProductsLoaded = true;
     })
-
 })
 
-export { places }
+export { products }
