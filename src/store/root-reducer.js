@@ -1,5 +1,5 @@
-import {combineReducers} from 'redux';
-import { products } from './products/products';
+import {combineReducers} from 'redux'
+import { products } from './products/products'
 
 
 export const NameSpace = {
@@ -8,4 +8,4 @@ export const NameSpace = {
 
 export default combineReducers({
   [NameSpace.PRODUCTS]: products,
-});
+})

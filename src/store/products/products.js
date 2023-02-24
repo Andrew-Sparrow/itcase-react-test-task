@@ -1,13 +1,13 @@
-import { createReducer } from '@reduxjs/toolkit';
+import { createReducer } from '@reduxjs/toolkit'
 
 import {
   loadProducts
-} from '../actions.js';
+} from '../actions.js'
 
 const initialState = {
   products: [],
   isProductsLoaded: false
-};
+}
 
 
 const places = createReducer(initialState, (builder) => {
@@ -17,7 +17,6 @@ const places = createReducer(initialState, (builder) => {
       state.isProductsLoaded = true;
     })
 
-});
+})
 
-export { places };
-
+export { places }
