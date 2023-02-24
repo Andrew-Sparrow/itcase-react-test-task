@@ -17,10 +17,10 @@ export default function Main() {
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>ddddddddddd</p>
-      </header>
+    <div className="main">
+      {products.map((product) => {
+        return <p key={product.id}>{product.name}</p>
+      })}
     </div>
   )
 }

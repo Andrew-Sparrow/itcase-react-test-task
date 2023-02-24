@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route, HashRouter as BrowserRouter } from 'react-router-dom'
 import browserHistory from '../../browser-history'
 
+import './app.scss';
 import Main from '../main/Main.jsx'
 import { AppRoute } from '../../const'
 import NotFound from '../not-found/NotFound'

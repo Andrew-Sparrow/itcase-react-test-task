@@ -1,0 +1,25 @@
+$app-color-bg: #282c34;
+$tablet-width: 768px;
+$main-color-bg: #d1d6d7;
+
+
+body {
+  background-color: $app-color-bg;
+}
+
+p {
+  margin: 0;
+}
+
+.main {
+  box-sizing: border-box;
+  width: $tablet-width;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: $main-color-bg;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+  min-height: 100vh;
+}
