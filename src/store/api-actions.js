@@ -8,7 +8,7 @@ import { getProducts } from '../services/api';
 
 export const fetchProductsList = () => (dispatch, _getState) => (
   getProducts()
-    .then(({data}) => {
+    .then((data) => {
       dispatch(loadProducts(data));
     })
     .catch((err) => {})
