@@ -2,7 +2,7 @@ import React from 'react';
 
 function LoadingScreen() {
   return (
-    <p>Loading...</p>
+    <h1 className='loading'>Loading...</h1>
   );
 }
 
