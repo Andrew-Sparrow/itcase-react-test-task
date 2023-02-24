@@ -3,11 +3,18 @@ import { createAction } from '@reduxjs/toolkit';
 export const ActionType = {
   LOAD_PRODUCTS: 'products/loadProducts',
   CHANGE_LOADING_PRODUCTS_PROCESS_STATUS: 'products/changeLoadingProductsProcessStatus',
+  LOAD_PRODUCT: 'product/loadProduct',
+  CHANGE_LOADING_PRODUCT_PROCESS_STATUS: 'product/changeLoadingProductProcessStatus',
   REDIRECT_TO_ROUTE: 'products/redirectToRoute',
 }
 
 export const loadProducts = createAction(
   ActionType.LOAD_PRODUCTS,
+  (products) => ({ payload: products }),
+)
+
+export const loadProduct = createAction(
+  ActionType.LOAD_PRODUCT,
   (products) => ({ payload: products }),
 )
 
