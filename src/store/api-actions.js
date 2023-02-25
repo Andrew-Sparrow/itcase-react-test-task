@@ -5,7 +5,7 @@ import {
 
 import {
   getProducts,
-  getProduct
+  getProduct,
 } from '../services/api';
 
 
