@@ -6,8 +6,10 @@ import { getSizes } from '../../store/sizes/selectors';
 
 
 function Sizes(props) {
+  const { colorSizes } = props;
+  console.log(colorSizes);
   const sizes = useSelector(getSizes);
-  const [sizeItem, setSizeItem] = useState();
+  const [sizeItemId, setSizeItemId] = useState();
 
 
   return (
@@ -15,13 +17,14 @@ function Sizes(props) {
       <h3 className='sizes__title'>Размеры</h3>
       <select
         className='sizes__select'
-        value={sizeItem}
-        onChange={e => setSizeItem(e.target.value)}
+        value={sizeItemId}
+        onChange={e => setSizeItemId(e.target.value)}
       >
         {sizes.map((size) => {
           return <option
             value={size.id}
             key={size.id}
+            disabled={!colorSizes.includes(size.id)}
           >
             {`${ size.label } - ${ size.number }`}
           </option>
