@@ -3,6 +3,7 @@
 .color {
   width: 200px;
   display: flex;
+  cursor: pointer;
 
   &--active {
     border: 5px solid $green;
@@ -10,6 +11,8 @@
 
   &__name {
     padding-top: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
   }
 
   &__box {

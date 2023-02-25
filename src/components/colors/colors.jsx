@@ -5,15 +5,18 @@ import './colors.scss';
 
 function Colors({ colors }) {
   return (
-    <ul className='colors'>
-      {colors.map((color) => {
-        return <Color
-          key={color.id}
-          id={color.id}
-          name={color.name}
-        />
-      })}
-    </ul>
+    <div className='colors'>
+      <h3 className='colors__title'>Цвета</h3>
+      <ul className='colors__list'>
+        {colors.map((color) => {
+          return <Color
+            key={color.id}
+            id={color.id}
+            name={color.name}
+          />
+        })}
+      </ul>
+    </div>
   );
 }
 
