@@ -29,7 +29,7 @@ function ProductCard(props) {
   console.log(product);
 
   return (
-    <div className='product-card'>
+    <form className='product-card'>
       <section className='left'>
         <ul className='images'>
           {(product.colors.length && product.colors[0].images.length)
@@ -47,7 +47,7 @@ function ProductCard(props) {
         <h1 className='product-card__title'>{product.name}</h1>
         <Colors colors={product.colors} />
       </section>
-    </div>
+    </form>
   );
 }
 

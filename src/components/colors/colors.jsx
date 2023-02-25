@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Color from '../color/color';
+import './colors.scss';
 
 function Colors({colors}) {
   return (

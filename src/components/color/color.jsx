@@ -11,7 +11,7 @@ function Color(props) {
 
   return (
     <li className='color' id={id}>
-      <div className='color__box' style={{ backgroundColor: `${COLORS[name]}` }} ></div>
+      <div className='color__box color__box--active' style={{ backgroundColor: `${COLORS[name]}` }} ></div>
       <p className="color__name">{name}</p>
     </li>
   );
