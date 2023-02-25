@@ -47,10 +47,9 @@ function ProductCard(props) {
             {product.colors.find((color) => color.id === +activeColorId).price}
           </p>
         </div>
-
-        <Description description={product.colors[0].description} />
+        <Description description={product.colors.find((color) => color.id === +activeColorId).description} />
         <Colors colors={product.colors} handleChangeColorId={handleChangeColorId} />
-        <Sizes colorSizes={product.colors[0].sizes} />
+        <Sizes colorSizes={product.colors.find((color) => color.id === +activeColorId).sizes} />
       </section>
     </form>
   );
