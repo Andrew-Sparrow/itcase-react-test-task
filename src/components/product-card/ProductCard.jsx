@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 
-import './product-card.scss'
-import { getProduct, getIsProductLoaded } from '../../store/product-card/selectors'
-import LoadingScreen from '../loading-screen/LoadingScreen'
-import { fetchProduct } from '../../store/api-actions'
-import Colors from './colors/Colors'
+import './product-card.scss';
+import { getProduct, getIsProductLoaded } from '../../store/product-card/selectors';
+import LoadingScreen from '../loading-screen/LoadingScreen';
+import { fetchProduct } from '../../store/api-actions';
+import Colors from '../colors/colors';
 
 
 function ProductCard(props) {
@@ -45,9 +45,10 @@ function ProductCard(props) {
       </section>
       <section className='right'>
         <h1 className='product-card__title'>{product.name}</h1>
+        <Colors colors={product.colors} />
       </section>
     </div>
   );
 }
 
-export default ProductCard
+export default ProductCard;

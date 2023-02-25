@@ -1,13 +1,13 @@
-import { createReducer } from '@reduxjs/toolkit'
+import { createReducer } from '@reduxjs/toolkit';
 
 import {
   loadSizes
-} from '../actions.js'
+} from '../actions.js';
 
 const initialState = {
   sizes: {},
   isSizesLoaded: false
-}
+};
 
 
 const sizes = createReducer(initialState, (builder) => {
@@ -18,4 +18,4 @@ const sizes = createReducer(initialState, (builder) => {
     })
 })
 
-export { sizes }
+export { sizes };

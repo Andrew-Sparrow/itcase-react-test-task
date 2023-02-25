@@ -4,4 +4,4 @@ export const COLORS = {
   'серый': 'gray',
   'желтый': 'yellow',
   'синий': 'blue'
-}
+};

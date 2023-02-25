@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { COLORS } from './consts.js'
-import './color.scss'
+import { COLORS } from './consts.js';
+import './color.scss';
 
 function Color(props) {
   const {

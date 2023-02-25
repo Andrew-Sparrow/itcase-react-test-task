@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Color from '../color/Color'
+import Color from '../color/color';
 
 function Colors({colors}) {
   return (
