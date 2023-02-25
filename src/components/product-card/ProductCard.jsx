@@ -41,6 +41,7 @@ function ProductCard(props) {
         <div className='price'>
           <h3 className='price__title'>Цена</h3>
           <p className='price__number'>{product.colors[0].price}</p>
+          
         </div>
 
         <Description description={product.colors[0].description} />
