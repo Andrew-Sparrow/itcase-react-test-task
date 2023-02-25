@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
+import './product-card.scss'
 import { getProduct, getIsProductLoaded } from '../../store/product-card/selectors';
 import LoadingScreen from '../loading-screen/LoadingScreen';
 import { fetchProduct } from '../../store/api-actions';
@@ -19,14 +20,15 @@ function ProductCard(props) {
   if (!isProductLoaded) {
     return (
       <LoadingScreen />
-      );
+    );
   }
 
   console.log(product);
 
   return (
-    <div>
+    <div className='product-card'>
       <h1>{product.name}</h1>
+      
     </div>
   );
 }
