@@ -26,7 +26,10 @@ function ProductCard(props) {
   dispatch(fetchProduct(+id))
 
   const product = useSelector(getProduct)
-  // console.log(product);
+
+  function findColorById() {
+    return product.colors.find((color) => color.id === +activeColorId)
+  }
 
   if (!isProductLoaded) {
     return (
@@ -44,12 +47,12 @@ function ProductCard(props) {
         <div className='price'>
           <h3 className='price__title'>Цена</h3>
           <p className='price__number'>
-            {product.colors.find((color) => color.id === +activeColorId).price}
+            {findColorById().price}
           </p>
         </div>
-        <Description description={product.colors.find((color) => color.id === +activeColorId).description} />
+        <Description description={findColorById().description} />
         <Colors colors={product.colors} handleChangeColorId={handleChangeColorId} />
-        <Sizes colorSizes={product.colors.find((color) => color.id === +activeColorId).sizes} />
+        <Sizes colorSizes={findColorById().sizes} />
       </section>
     </form>
   );
