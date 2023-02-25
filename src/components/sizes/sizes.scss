@@ -1,4 +1,11 @@
 .sizes {
-  list-style: none;
-  margin-top: 50px;
+  width: 200px;
+  &__title {
+    font-size: 25px;
+  }
+
+  &__list {
+    list-style: none;
+    margin-top: 50px;
+  }
 }

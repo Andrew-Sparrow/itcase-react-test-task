@@ -10,16 +10,19 @@ function Sizes(props) {
   const sizes = useSelector(getSizes);
 
   return (
-    <ul className='sizes'>
-      {sizes.map((size) => {
-        return <Size
-          key={size.id}
-          id={size.id}
-          label={size.label}
-          number={size.number}
-        />
-      })}
-    </ul>
+    <div className='sizes'>
+      <h3 className='sizes__title'>Размеры</h3>
+      <ul className='sizes__list'>
+        {sizes.map((size) => {
+          return <Size
+            key={size.id}
+            id={size.id}
+            label={size.label}
+            number={size.number}
+          />
+        })}
+      </ul>
+    </div>
   );
 }
 
