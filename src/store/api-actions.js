@@ -1,5 +1,6 @@
 import {
   loadProducts,
+  loadProduct,
 } from './actions'
 
 import {
@@ -16,10 +17,10 @@ export const fetchProductsList = () => (dispatch, _getState) => (
     .catch((err) => {})
 )
 
-export const fetchProduct = () => (dispatch, _getState) => (
-  getProduct()
+export const fetchProduct = (id) => (dispatch, _getState) => (
+  getProduct(id)
     .then((data) => {
-      dispatch(loadProducts(data));
+      dispatch(loadProduct(data));
     })
     .catch((err) => {})
 )

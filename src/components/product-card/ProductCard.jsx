@@ -4,21 +4,26 @@ import { useParams } from 'react-router-dom';
 
 import { getProduct, getIsProductLoaded } from '../../store/product-card/selectors';
 import LoadingScreen from '../loading-screen/LoadingScreen';
+import { fetchProduct } from '../../store/api-actions';
 
 
 function ProductCard(props) {
   const { id } = useParams();
-  const product = useSelector(getProduct);
   const isProductLoaded = useSelector(getIsProductLoaded);
   const dispatch = useDispatch();
 
-  dispatch(getProduct(id));
+  dispatch(fetchProduct(+id));
+
+  const product = useSelector(getProduct);
+
 
   if (!isProductLoaded) {
     return (
       <LoadingScreen />
-    );
+      );
   }
+
+  console.log(product);
 
   return (
     <div>

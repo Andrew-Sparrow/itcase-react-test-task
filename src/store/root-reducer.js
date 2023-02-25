@@ -5,7 +5,7 @@ import { product } from './product-card/product-card';
 
 export const NameSpace = {
   PRODUCTS: 'PRODUCTS',
-  PRODUCT_CARD: 'PRODUCTS-CARD',
+  PRODUCT_CARD: 'PRODUCT_CARD',
 };
 
 export default combineReducers({

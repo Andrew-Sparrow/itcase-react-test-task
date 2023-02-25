@@ -13,13 +13,18 @@ export const loadProducts = createAction(
   (products) => ({ payload: products }),
 )
 
-export const loadProduct = createAction(
-  ActionType.LOAD_PRODUCT,
-  (products) => ({ payload: products }),
-)
-
 export const changeLoadingProductsProcessStatus = createAction(
   ActionType.CHANGE_LOADING_PRODUCTS_PROCESS_STATUS,
+  (isLoading) => ({ payload: isLoading }),
+)
+
+export const loadProduct = createAction(
+  ActionType.LOAD_PRODUCT,
+  (product) => ({ payload: product }),
+)
+
+export const changeLoadingProductProcessStatus = createAction(
+  ActionType.CHANGE_LOADING_PRODUCT_PROCESS_STATUS,
   (isLoading) => ({ payload: isLoading }),
 )
 

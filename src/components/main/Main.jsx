@@ -23,7 +23,7 @@ export default function Main() {
       {products.length === 0
         ? <MainEmpty />
         : products.map((product) => {
-          return <Product key={product.id} {...product} />
+          return <Product key={product.id} />
         })}
     </div>
   )
