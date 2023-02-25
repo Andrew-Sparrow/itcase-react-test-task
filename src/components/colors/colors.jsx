@@ -17,6 +17,7 @@ function Colors({ colors }) {
       >
         {colors.map((color) => {
           return <option
+            id={color.id}
             value={color.name}
             style={{ backgroundColor: `${ COLORS[color.name] }` }}
             key={color.id}

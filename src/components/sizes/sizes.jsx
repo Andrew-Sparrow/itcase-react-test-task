@@ -1,27 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useSelector } from 'react-redux';
 
 import './sizes.scss';
-import Size from '../size/size';
 import { getSizes } from '../../store/sizes/selectors';
 
 
 function Sizes(props) {
   const sizes = useSelector(getSizes);
+  const [sizeItem, setSizeItem] = useState();
+
 
   return (
     <div className='sizes'>
       <h3 className='sizes__title'>Размеры</h3>
-      <ul className='sizes__list'>
+      <select
+        className='sizes__select'
+        value={sizeItem}
+        onChange={e => setSizeItem(e.target.value)}
+      >
         {sizes.map((size) => {
-          return <Size
+          return <option
+            value={size.id}
             key={size.id}
-            id={size.id}
-            label={size.label}
-            number={size.number}
-          />
+          >
+            {`${ size.label } - ${ size.number }`}
+          </option>
         })}
-      </ul>
+      </select>
     </div>
   );
 }

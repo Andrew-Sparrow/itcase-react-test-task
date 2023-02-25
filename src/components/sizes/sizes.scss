@@ -1,11 +1,14 @@
 .sizes {
   width: 200px;
+
   &__title {
     font-size: 25px;
+    margin-bottom: 30px;
   }
 
-  &__list {
-    list-style: none;
-    margin-top: 50px;
+  &__select {
+    width: 194px;
+    padding: 10px;
+    font-size: 25px;
   }
 }
