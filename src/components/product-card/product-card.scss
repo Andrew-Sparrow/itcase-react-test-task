@@ -1,6 +1,7 @@
 @import '../app/variables.scss';
 
 .product-card {
+  display: flex;
   box-sizing: border-box;
   width: $tablet-width;
   margin-left: auto;
@@ -12,4 +13,42 @@
   padding-right: 20px;
   padding-bottom: 50px;
   min-height: 100vh;
+
+  &__title {
+    padding-top: 60px;
+  }
+}
+
+.left {
+  width: 300px;
+}
+
+.right {
+  width: 425px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.images {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+
+  &__item {
+    width: 50px;
+    height: 60px;
+    cursor: pointer;
+    object-fit: contain;
+
+    &--active {
+      border: 1px solid $black;
+    }
+  }
+
+  &__picture {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+  }
 }

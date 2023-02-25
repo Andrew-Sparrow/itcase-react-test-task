@@ -24,7 +24,6 @@ const store = configureStore({
 store.dispatch(fetchProductsList());
 store.dispatch(fetchSizes());
 
-
 if (rootView) {
   root.render(
     <React.StrictMode>
