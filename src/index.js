@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client';
 import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux';
 
@@ -12,6 +12,7 @@ import { fetchProductsList } from './store/api-actions';
 
 
 const rootView = document.getElementById('root')
+const root = ReactDOM.createRoot(rootView);
 
 const store = configureStore({
   reducer: rootReducer,
@@ -25,12 +26,11 @@ store.dispatch(fetchProductsList());
 
 
 if (rootView) {
-  ReactDOM.render(
+  root.render(
     <React.StrictMode>
       <Provider store={store}>
         <App />
       </Provider>
-    </React.StrictMode>,
-    rootView
+    </React.StrictMode>
   )
 }

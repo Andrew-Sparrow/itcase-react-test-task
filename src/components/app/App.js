@@ -1,5 +1,9 @@
 import React from 'react'
-import { Switch, Route, Router as BrowserRouter } from 'react-router-dom'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import browserHistory from '../../browser-history'
 
 import './app.scss';
@@ -12,17 +16,12 @@ import ProductCard from '../product-card/ProductCard';
 export default function App() {
   return (
     <BrowserRouter history={browserHistory}>
-      <Switch>
-        <Route exact path={AppRoute.MAIN}>
-          <Main className="page page--gray page--index" />
-        </Route>
-        <Route exact path={AppRoute.PRODUCT}>
-          <ProductCard />
-        </Route>
-        <Route>
-          <NotFound />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path={AppRoute.MAIN} element={<Main />} />
+        <Route path={AppRoute.PRODUCT} element={<ProductCard />} />
+        {/* <Route path="*" element={<NotFound />} />
+         */}
+      </Routes>
     </BrowserRouter>
   )
 }

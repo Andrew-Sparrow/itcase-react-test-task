@@ -16,7 +16,6 @@ function ProductCard(props) {
 
   const product = useSelector(getProduct);
 
-
   if (!isProductLoaded) {
     return (
       <LoadingScreen />
