@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import rootReducer from './store/root-reducer';
 import App from './components/app/App'
 import './styles/index.css'
-import { redirect } from './store/middlewares/redirect';
 import { fetchProductsList } from './store/api-actions';
 
 
@@ -19,7 +18,7 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       thunk: {},
-    }).concat(redirect),
+    })
 });
 
 store.dispatch(fetchProductsList());
