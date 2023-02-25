@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import Color from '../color/color';
+import { COLORS } from './consts.js';
+
 import './colors.scss';
 
 function Colors({ colors }) {
+  const [color, setColor] = useState();
+
   return (
     <div className='colors'>
       <h3 className='colors__title'>Цвета</h3>
-      <ul className='colors__list'>
+      <select
+        className='colors__select'
+        value={color}
+        onChange={e => setColor(e.target.value)}
+      >
         {colors.map((color) => {
-          return <Color
+          return <option
+            value={color.name}
+            style={{ backgroundColor: `${ COLORS[color.name] }` }}
             key={color.id}
-            id={color.id}
-            name={color.name}
-          />
+          >
+            {color.name}
+          </option>
         })}
-      </ul>
+      </select>
     </div>
   );
 }
