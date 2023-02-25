@@ -34,10 +34,15 @@ function ProductCard(props) {
   return (
     <form className='product-card'>
       <section className='left'>
-        <Images product={product}/>
+        <Images product={product} />
       </section>
       <section className='right'>
         <h1 className='product-card__title'>{product.name}</h1>
+        <div className='price'>
+          <h3 className='price__title'>Цена</h3>
+          <p className='price__number'>{product.colors[0].price}</p>
+        </div>
+
         <Description description={product.colors[0].description} />
         <Colors colors={product.colors} />
         <Sizes />

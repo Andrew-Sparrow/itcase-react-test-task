@@ -31,3 +31,17 @@
   padding-right: 20px;
 }
 
+.price {
+  width: 200px;
+  margin-bottom: 20px;
+  
+  &__title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  &__number {
+    font-size: 40px;
+  }
+}
+
