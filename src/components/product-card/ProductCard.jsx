@@ -7,6 +7,7 @@ import { getProduct, getIsProductLoaded } from '../../store/product-card/selecto
 import LoadingScreen from '../loading-screen/LoadingScreen';
 import { fetchProduct } from '../../store/api-actions';
 import Colors from '../colors/colors';
+import Sizes from '../sizes/sizes';
 
 
 function ProductCard(props) {
@@ -46,6 +47,7 @@ function ProductCard(props) {
       <section className='right'>
         <h1 className='product-card__title'>{product.name}</h1>
         <Colors colors={product.colors} />
+        {/* <Sizes /> */}
       </section>
     </form>
   );

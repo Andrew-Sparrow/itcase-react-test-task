@@ -1,6 +1,6 @@
 @import '../app/variables.scss';
 
-.color {
+.sizes {
   width: 200px;
   display: flex;
 
@@ -8,11 +8,7 @@
     border: 5px solid $green;
   }
 
-  &__name {
-    padding-top: 20px;
-  }
-
-  &__box {
+  &__label {
     width: 70px;
     height: 70px;
     margin-right: 20px;
