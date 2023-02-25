@@ -7,7 +7,6 @@ import { getSizes } from '../../store/sizes/selectors';
 
 function Sizes(props) {
   const { colorSizes } = props;
-  console.log(colorSizes);
   const sizes = useSelector(getSizes);
   const [sizeItemId, setSizeItemId] = useState();
 
@@ -19,6 +18,7 @@ function Sizes(props) {
         className='sizes__select'
         value={sizeItemId}
         onChange={e => setSizeItemId(e.target.value)}
+        name='sizes'
       >
         {sizes.map((size) => {
           return <option
