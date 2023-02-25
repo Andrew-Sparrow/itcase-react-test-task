@@ -1,16 +1,29 @@
 @import '../app/variables.scss';
 
-.sizes {
+.size {
   width: 200px;
   display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
 
   &--active {
     border: 5px solid $green;
   }
 
+  &--disabled {
+    cursor: auto;
+  }
+
   &__label {
     width: 70px;
-    height: 70px;
+    margin-right: 20px;
+  }
+
+  &__number {
+    width: 70px;
     margin-right: 20px;
   }
 }

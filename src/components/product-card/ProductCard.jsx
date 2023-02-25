@@ -47,7 +47,7 @@ function ProductCard(props) {
       <section className='right'>
         <h1 className='product-card__title'>{product.name}</h1>
         <Colors colors={product.colors} />
-        {/* <Sizes /> */}
+        <Sizes />
       </section>
     </form>
   );

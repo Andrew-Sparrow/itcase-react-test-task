@@ -11,7 +11,7 @@ function Size(props) {
 
   return (
     <li className='size size--active' id={id}>
-      <p className='size__label '>{label}</p>
+      <p className='size__label '>{label}</p> -
       <p className="size__number">{number}</p>
     </li>
   );

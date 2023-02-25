@@ -1,21 +1,21 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { getSizes } from '../../services/api';
 import './sizes.scss';
 import Size from '../size/size';
+import { getSizes } from '../../store/sizes/selectors';
 
 
 function Sizes(props) {
   const sizes = useSelector(getSizes);
 
   return (
-    <ul className='colors'>
+    <ul className='sizes'>
       {sizes.map((size) => {
         return <Size
           key={size.id}
           id={size.id}
-          name={size.label}
+          label={size.label}
           number={size.number}
         />
       })}
