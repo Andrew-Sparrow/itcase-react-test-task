@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
+import './main.scss'
 import { getProducts, getIsProductsLoaded } from '../../store/products/selectors'
 import LoadingScreen from '../loading-screen/LoadingScreen.jsx'
 import MainEmpty from '../main-empty/MainEmpty';
