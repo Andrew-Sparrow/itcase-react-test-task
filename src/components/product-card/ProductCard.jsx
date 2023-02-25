@@ -9,6 +9,7 @@ import { fetchProduct } from '../../store/api-actions';
 import Colors from '../colors/colors';
 import Sizes from '../sizes/sizes';
 import Description from '../description/description';
+import Images from '../images/images';
 
 
 function ProductCard(props) {
@@ -20,7 +21,7 @@ function ProductCard(props) {
 
   dispatch(fetchProduct(+id))
 
-  const product = useSelector(getProduct);
+  const product = useSelector(getProduct)
 
   if (!isProductLoaded) {
     return (
@@ -33,19 +34,7 @@ function ProductCard(props) {
   return (
     <form className='product-card'>
       <section className='left'>
-        <ul className='images'>
-          {(product.colors.length && product.colors[0].images.length)
-            && product.colors[0].images.map((imgPath, index) =>
-              <li className='images__point' key={index}>
-                <img
-                  className='images__item images__item--active'
-                  src={imgPath}
-                  alt='Продукт'
-                  key={index}
-                />
-              </li>)}
-        </ul>
-        <img src={product.colors[0].images[0]} alt="продукт" className='images__picture' />
+        <Images product={product}/>
       </section>
       <section className='right'>
         <h1 className='product-card__title'>{product.name}</h1>
