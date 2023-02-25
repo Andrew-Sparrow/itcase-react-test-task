@@ -6,6 +6,7 @@ import './product-card.scss'
 import { getProduct, getIsProductLoaded } from '../../store/product-card/selectors'
 import LoadingScreen from '../loading-screen/LoadingScreen'
 import { fetchProduct } from '../../store/api-actions'
+import Colors from './colors/Colors'
 
 
 function ProductCard(props) {
@@ -45,7 +46,6 @@ function ProductCard(props) {
       <section className='right'>
         <h1 className='product-card__title'>{product.name}</h1>
       </section>
-
     </div>
   );
 }
