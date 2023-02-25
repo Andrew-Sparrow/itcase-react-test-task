@@ -19,10 +19,14 @@ function ProductCard(props) {
 
   const [activeColorId, setActiveColorId] = useState(1)
 
+  function handleChangeColorId(id) {
+    setActiveColorId(id)
+  }
+
   dispatch(fetchProduct(+id))
 
   const product = useSelector(getProduct)
-  console.log(product);
+  // console.log(product);
 
   if (!isProductLoaded) {
     return (
@@ -39,11 +43,13 @@ function ProductCard(props) {
         <h1 className='product-card__title'>{product.name}</h1>
         <div className='price'>
           <h3 className='price__title'>Цена</h3>
-          <p className='price__number'>{product.colors[0].price}</p>
+          <p className='price__number'>
+            {product.colors.find((color) => color.id === +activeColorId).price}
+          </p>
         </div>
 
         <Description description={product.colors[0].description} />
-        <Colors colors={product.colors} />
+        <Colors colors={product.colors} handleChangeColorId={handleChangeColorId} />
         <Sizes colorSizes={product.colors[0].sizes} />
       </section>
     </form>
