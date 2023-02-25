@@ -3,12 +3,12 @@ import React from 'react';
 import './images.scss';
 
 
-function Images({product}) {
+function Images({ images }) {
   return (
     <div>
       <ul className='images'>
-        {(product.colors.length && product.colors[0].images.length)
-          && product.colors[0].images.map((imgPath, index) =>
+        {(images.length !== 0)
+          ? images.map((imgPath, index) =>
             <li className='images__point' key={index}>
               <img
                 className='images__item images__item--active'
@@ -16,13 +16,15 @@ function Images({product}) {
                 alt='Продукт'
                 key={index}
               />
-            </li>)}
+            </li>) : ''}
       </ul>
-      <img
-        className='images__picture'
-        src={product.colors[0].images[0]}
-        alt="продукт"
-      />
+      {(images.length !== 0) ?
+        <img
+          className='images__picture'
+          src={images[0]}
+          alt="продукт"
+        />
+        : ''}
     </div>
   );
 }

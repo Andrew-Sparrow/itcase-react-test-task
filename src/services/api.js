@@ -6,6 +6,8 @@ const sizes = [
   { id: 5, label: 'XL', number: 52 },
 ]
 
+// ['/images/1/black_front.png', '/images/1/black_back.png'],
+
 const products = [
   {
     id: 1,

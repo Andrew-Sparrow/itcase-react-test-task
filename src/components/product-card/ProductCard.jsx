@@ -40,7 +40,7 @@ function ProductCard(props) {
   return (
     <form className='product-card'>
       <section className='left'>
-        <Images product={product} />
+        <Images images={findColorById().images} />
       </section>
       <section className='right'>
         <h1 className='product-card__title'>{product.name}</h1>
