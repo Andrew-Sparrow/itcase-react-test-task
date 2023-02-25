@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import rootReducer from './store/root-reducer';
 import App from './components/app/App'
 import './styles/index.css'
-import { fetchProductsList } from './store/api-actions';
+import { fetchProductsList, fetchSizes } from './store/api-actions';
 
 
 const rootView = document.getElementById('root')
@@ -22,6 +22,7 @@ const store = configureStore({
 });
 
 store.dispatch(fetchProductsList());
+store.dispatch(fetchSizes());
 
 
 if (rootView) {

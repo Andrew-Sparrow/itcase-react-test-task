@@ -1,4 +1,5 @@
-import {combineReducers} from 'redux'
+import { combineReducers } from 'redux'
+
 import { products } from './products/products'
 import { product } from './product-card/product-card';
 import { sizes } from './sizes/sizes';
