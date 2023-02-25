@@ -18,7 +18,7 @@ function Images({ images }) {
             <li className='images__point' key={index}>
               <img
                 id={index}
-                className={'images__item ' + `${activeImgIndex === index ? 'images__item--active' : ''}`}
+                className={`images__item ${activeImgIndex === index ? 'images__item--active' : ''}`}
                 src={imgPath}
                 alt='Продукт'
                 key={index}
