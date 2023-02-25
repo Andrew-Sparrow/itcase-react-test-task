@@ -19,8 +19,7 @@ export default function App() {
       <Routes>
         <Route path={AppRoute.MAIN} element={<Main />} />
         <Route path={AppRoute.PRODUCT} element={<ProductCard />} />
-        {/* <Route path="*" element={<NotFound />} />
-         */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
