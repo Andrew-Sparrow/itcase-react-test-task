@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/itcase-react-test-task/static/css/main.e5e9ea6e.css",
-    "main.js": "/itcase-react-test-task/static/js/main.dc4bdfed.js",
-    "index.html": "/itcase-react-test-task/index.html",
-    "main.e5e9ea6e.css.map": "/itcase-react-test-task/static/css/main.e5e9ea6e.css.map",
-    "main.dc4bdfed.js.map": "/itcase-react-test-task/static/js/main.dc4bdfed.js.map"
+    "main.css": "/static/css/main.e5e9ea6e.css",
+    "main.js": "/static/js/main.1fcd7067.js",
+    "index.html": "/index.html",
+    "main.e5e9ea6e.css.map": "/static/css/main.e5e9ea6e.css.map",
+    "main.1fcd7067.js.map": "/static/js/main.1fcd7067.js.map"
   },
   "entrypoints": [
     "static/css/main.e5e9ea6e.css",
-    "static/js/main.dc4bdfed.js"
+    "static/js/main.1fcd7067.js"
   ]
 }
