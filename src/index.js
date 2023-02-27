@@ -11,7 +11,7 @@ import { fetchProductsList, fetchSizes } from './store/api-actions';
 
 
 const rootView = document.getElementById('root')
-const root = ReactDOM.createRoot(rootView);
+const root = ReactDOM.createRoot(rootView)
 
 const store = configureStore({
   reducer: rootReducer,
@@ -24,12 +24,11 @@ const store = configureStore({
 store.dispatch(fetchProductsList());
 store.dispatch(fetchSizes());
 
-if (rootView) {
-  root.render(
-    <React.StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </React.StrictMode>
-  )
-}
+root.render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
+)
+
